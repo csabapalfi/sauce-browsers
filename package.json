@@ -1,0 +1,13 @@
+{
+  "name": "sauce-browsers",
+  "version": "0.0.0",
+  "scripts": {
+    "data:appium": "curl --silent https://saucelabs.com/rest/v1/info/platforms/appium > data/appium.json",
+    "data:webdriver": "curl --silent https://saucelabs.com/rest/v1/info/platforms/webdriver > data/webdriver.json",
+    "postinstall": "mkdir -p data && run-p data:appium data:webdriver"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
