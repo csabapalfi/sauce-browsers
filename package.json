@@ -4,7 +4,7 @@
   "scripts": {
     "data:appium": "curl --silent https://saucelabs.com/rest/v1/info/platforms/appium > data/appium.json",
     "data:webdriver": "curl --silent https://saucelabs.com/rest/v1/info/platforms/webdriver > data/webdriver.json",
-    "postinstall": "mkdir -p data && run-p data:appium data:webdriver"
+    "build": "mkdir -p data && run-p data:appium data:webdriver && node build > browsers.csv"
   },
   "dependencies": {},
   "devDependencies": {
